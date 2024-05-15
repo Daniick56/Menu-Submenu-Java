@@ -27,13 +27,18 @@ public class Main {
                     System.out.println("El nombre ingresado es: " + nombre);
                     break;
                 case 3:
-                    System.out.print("Ingrese el primer número: ");
-                    int numero1 = scanner.nextInt();
-                    System.out.print("Ingrese el segundo número: ");
-                    int numero2 = scanner.nextInt();
-                    int suma = numero1 + numero2;
-                    System.out.println("La suma de " + numero1 + " y " + numero2 + " es: " + suma);
-                    scanner.nextLine(); // Consumir el salto de línea después de nextInt()
+                    try {
+                        System.out.print("Ingrese el primer número: ");
+                        int numero1 = Integer.parseInt(scanner.next());
+                        System.out.print("Ingrese el segundo número: ");
+                        int numero2 = Integer.parseInt(scanner.next());
+                        int suma = numero1 + numero2;
+                        System.out.println("La suma de " + numero1 + " y " + numero2 + " es: " + suma);
+                        scanner.nextLine(); // Consumir el salto de línea después de nextInt()
+                    }
+                    catch (NumberFormatException e) {
+                        System.out.println("Ingresa valores numericos.");
+                    }
                     break;
                 default:
                     System.out.println("Código inválido. Por favor ingrese 1, 2 o 3.");
