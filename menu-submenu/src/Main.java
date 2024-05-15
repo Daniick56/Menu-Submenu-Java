@@ -33,7 +33,7 @@ public class Main {
             menu += "Por favor selecciona una opcion.";
 
             System.out.println(menu);
-            codMenuPpal = scanner.nextInt(); // Capturamos la selección del usuario
+            codMenuPpal = Integer.parseInt(scanner.next()); // Capturamos la selección del usuario
 
             switch (codMenuPpal) {
                 case 1:
@@ -46,7 +46,7 @@ public class Main {
                         menuTipico += "Por favor seleccione una opcion.\n";
 
                         System.out.println(menuTipico);
-                        codMenuTipico = scanner.nextInt(); // Capturamos la selección del usuario
+                        codMenuTipico = Integer.parseInt(scanner.next()); // Capturamos la selección del usuario
 
                         switch (codMenuTipico) {
                             case 1:
